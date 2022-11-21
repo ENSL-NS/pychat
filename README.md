@@ -6,7 +6,7 @@ The library uses three main functions to control the interface.
 
 First, create an `Interface` object to initialize the interface. This sets up all the required tweaks by coloroma. The passed parameter specifies the username of the user of the
 
-```
+```python
 iface = interface.Interface("Francesco")
 ```
 
@@ -16,12 +16,13 @@ display. If the username corresponds to the local user, the message is
 treated accordingly.
 The function returns a message identifier.
 
-```
+```python
 i1 = iface.add_message("Francesco", "Is this WhatsApp?")
 ```
 
 `update_message` updates the status of a message, i.e., it updates the checks next to the message. Valid states for the message are "sent" (the default set at message creation, "received", and "read").
-```
+
+```python
 iface.update_message(i1, "received") 
 ```
 
